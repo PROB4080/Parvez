@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Md Parvez Sarker Prottoy — B2B Sales & Business Development</title>
+<meta name="description" content="Business development and B2B sales specialist: prospecting, lead generation and customer acquisition.">
+<style>
+:root{--bg:hsl(215 28% 5%);--s1:hsl(215 24% 8%);--s2:hsl(215 22% 11%);--line:hsl(215 18% 17%);--mute:hsl(215 12% 62%);--text:hsl(215 25% 93%);--w:hsl(215 75% 94%)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:16px/1.65 "Inter",system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh;overflow-x:hidden}
+#glow{position:fixed;width:520px;height:520px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,hsla(215,85%,88%,.07),transparent 65%);transform:translate(-50%,-50%);left:50%;top:30%;transition:left .25s ease-out,top .25s ease-out}
+.grid-bg{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;opacity:.28;-webkit-mask-image:radial-gradient(ellipse at 50% 20%,#000,transparent 70%);mask-image:radial-gradient(ellipse at 50% 20%,#000,transparent 70%)}
+nav{position:fixed;top:max(14px,env(safe-area-inset-top));left:50%;transform:translateX(-50%);z-index:20;display:flex;gap:4px;padding:6px;border-radius:999px;background:hsla(215,28%,8%,.65);border:1px solid var(--line);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 10px 40px rgba(0,0,0,.5);max-width:calc(100vw - 20px);overflow-x:auto;animation:drop .8s cubic-bezier(.2,.8,.2,1) both}
+nav a{color:var(--mute);text-decoration:none;font-size:14px;padding:8px 16px;border-radius:999px;transition:.25s;white-space:nowrap}
+nav a:hover{color:var(--w)}
+nav a.on{background:var(--w);color:hsl(215 28% 5%)}
+@keyframes drop{from{opacity:0;transform:translate(-50%,-20px)}}
+main{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding:110px 22px 120px}
+.page{display:none}
+.page.on{display:block;animation:enter .7s cubic-bezier(.2,.8,.2,1) both}
+@keyframes enter{from{opacity:0;transform:translateY(24px) scale(.99);filter:blur(6px)}}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--mute);border:1px solid var(--line);padding:6px 14px;border-radius:999px;background:hsla(215,85%,88%,.03)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--w);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.25;transform:scale(1.6)}}
+h1{font-size:clamp(38px,7vw,76px);line-height:1.05;letter-spacing:-.035em;font-weight:700;margin:22px 0 18px}
+h1 span{color:var(--mute)}
+h2{font-size:clamp(28px,4.5vw,44px);letter-spacing:-.03em;line-height:1.15;margin:16px 0 10px}
+p.lead{color:var(--mute);font-size:18px;max-width:600px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-block;padding:13px 24px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--line);color:var(--text);transition:.3s;cursor:pointer;background:transparent}
+.btn.pri{background:var(--w);color:hsl(215 28% 5%);border-color:var(--w)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px hsla(215,85%,88%,.12)}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;min-height:62vh}
+.art{position:relative;aspect-ratio:1;max-width:380px;width:100%;justify-self:center}
+.art svg{width:100%;height:100%;overflow:visible}
+.orbit{transform-origin:200px 200px;animation:spin 30s linear infinite}
+.orbit.r{animation-duration:46s;animation-direction:reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.float{animation:float 6s ease-in-out infinite}
+.float.b{animation-delay:-2s;animation-duration:7.5s}
+.float.c{animation-delay:-4s;animation-duration:5s}
+@keyframes float{50%{transform:translateY(-14px)}}
+.chip{position:absolute;padding:10px 16px;border-radius:14px;font-size:13px;background:hsla(215,24%,11%,.75);border:1px solid hsl(215 16% 22%);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 14px 40px rgba(0,0,0,.5)}
+.chip b{display:block;font-size:20px;color:var(--w);line-height:1.2}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:34px}
+.card{position:relative;padding:26px;border-radius:22px;background:linear-gradient(160deg,var(--s2),var(--s1));border:1px solid var(--line);transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .3s;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(300px circle at var(--mx,50%) var(--my,0%),hsla(215,85%,88%,.09),transparent 60%);opacity:0;transition:.3s}
+.card:hover{transform:translateY(-8px);border-color:hsl(215 15% 28%);box-shadow:0 24px 60px rgba(0,0,0,.6)}
+.card:hover::before{opacity:1}
+.card>*{position:relative}
+.card h3{font-size:19px;letter-spacing:-.01em;margin:10px 0 6px}
+.card p,.card li{color:var(--mute);font-size:15px}
+.card ul{padding-left:18px;margin-top:8px}
+.ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;border:1px solid hsl(215 16% 22%);background:hsl(215 28% 6%)}
+.ico svg{width:22px;height:22px;stroke:var(--w);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.big{font-size:44px;font-weight:700;letter-spacing:-.04em;color:var(--w)}
+.meta{font-size:13px;color:var(--mute)}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:start;margin-top:30px}
+.photo{aspect-ratio:4/5;border-radius:26px;border:1px solid var(--line);background:linear-gradient(160deg,hsl(215 20% 12%),hsl(215 28% 5%));overflow:hidden;display:grid;place-items:center;font-size:72px;font-weight:700;color:hsl(215 16% 22%);filter:grayscale(1) contrast(1.05) sepia(.15) hue-rotate(170deg) saturate(1.6)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.about p{color:var(--mute);margin-bottom:14px}
+.about p b{color:var(--text);font-weight:600}
+.timeline{margin-top:34px;border-left:1px solid var(--line);padding-left:26px;display:grid;gap:16px}
+.timeline .card{padding:22px}
+.timeline .card::after{content:"";position:absolute;left:-33px;top:30px;width:13px;height:13px;border-radius:50%;background:var(--bg);border:2px solid var(--w)}
+.row{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline}
+.pill{display:inline-block;font-size:12px;padding:3px 10px;border-radius:999px;border:1px solid hsl(215 16% 22%);color:var(--mute);margin:4px 4px 0 0}
+.bar{height:6px;border-radius:6px;background:hsl(215 20% 12%);margin-top:10px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,hsl(215 30% 35%),hsl(215 85% 80%));border-radius:6px;transition:width 1.4s cubic-bezier(.2,.8,.2,1) .25s}
+.page.on .bar i{width:var(--v)}
+.marquee{margin-top:40px;overflow:hidden;border-block:1px solid var(--line);padding:16px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent);mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent)}
+.marquee div{display:flex;gap:46px;width:max-content;animation:slide 28s linear infinite;color:var(--mute);font-size:15px;letter-spacing:.08em;text-transform:uppercase}
+@keyframes slide{to{transform:translateX(-50%)}}
+.contact a.card{display:block;text-decoration:none;color:inherit}
+.contact .card h3{word-break:break-word}
+footer{position:relative;z-index:1;text-align:center;color:hsl(215 10% 36%);font-size:13px;padding:0 0 40px}
+.rv{opacity:0;transform:translateY(22px)}
+.page.on .rv{animation:rise .8s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0)*90ms)}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@media(max-width:760px){.hero,.about{grid-template-columns:1fr}.art{max-width:300px;order:-1}.hero{min-height:auto}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+
+a.card{display:block;text-decoration:none;color:inherit}
+.hero{min-height:auto;padding-bottom:30px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:20px}
+.go{margin-top:10px;color:var(--text);transition:.3s}.card:hover .go{transform:translateX(6px)}
+.dash{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:16px}
+.dash .wide{grid-column:1/-1}
+.gantt{margin-top:18px}.yrs{display:grid;grid-template-columns:repeat(5,1fr);margin-left:96px;font-size:12px;color:var(--mute)}
+.g{display:flex;align-items:center;gap:10px;margin-top:12px}.g label{width:86px;font-size:13px;color:var(--mute);flex:none}
+.trk{position:relative;flex:1;height:14px;border-radius:8px;background:hsl(215 20% 12%)}
+.trk i{position:absolute;left:var(--l);width:var(--w);height:100%;border-radius:8px;background:linear-gradient(90deg,hsl(215 30% 35%),hsl(215 85% 85%));transform:scaleX(0);transform-origin:left;transition:transform 1.3s cubic-bezier(.2,.8,.2,1) .4s}
+.page.on .trk i{transform:scaleX(1)}
+.radar{width:100%;max-width:300px;display:block;margin:8px auto 0}
+.rp{transform-origin:100px 100px;transform:scale(0);transition:transform 1.2s cubic-bezier(.2,.8,.2,1) .4s}.page.on .rp{transform:scale(1)}
+.donutw{display:flex;align-items:center;gap:22px;flex-wrap:wrap;justify-content:center;margin-top:14px}
+.donut{width:150px;height:150px;border-radius:50%;background:conic-gradient(hsl(215 85% 90%) 0 40%,hsl(215 45% 62%) 0 65%,hsl(215 30% 40%) 0 85%,hsl(215 20% 24%) 0 100%);-webkit-mask:radial-gradient(circle,transparent 46px,#000 47px);mask:radial-gradient(circle,transparent 46px,#000 47px);animation:spin 40s linear infinite}
+.leg{list-style:none;font-size:14px;color:var(--mute);display:grid;gap:8px}.leg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:8px}
+.funnel{display:grid;gap:8px;margin-top:16px;justify-items:center}
+.funnel div{width:var(--w);height:42px;border-radius:10px;background:linear-gradient(90deg,hsl(215 22% 14%),hsl(215 30% 22%));border:1px solid var(--line);display:grid;place-items:center;font-size:13px;white-space:nowrap;overflow:hidden;transition:.3s}
+.card:hover .funnel div{border-color:hsl(215 20% 35%)}
+@media(max-width:760px){.dash{grid-template-columns:1fr}.funnel div{font-size:11px}}
+
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,hsl(215 30% 40%),hsl(215 85% 90%));z-index:50}
+.sr{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i,0)*80ms)}
+.sr.l{transform:translateX(-50px)}.sr.r{transform:translateX(50px)}
+.sr.in{opacity:1;transform:none}
+.chip{translate:0 calc(var(--sy,0)*-.06px)}.art{translate:0 calc(var(--sy,0)*.1px)}
+.band{overflow:hidden;margin:60px -22px 0;white-space:nowrap}
+.band div{display:inline-block;font-size:clamp(46px,9vw,110px);font-weight:800;letter-spacing:-.03em;color:transparent;-webkit-text-stroke:1px hsl(215 16% 24%);transform:translateX(calc(var(--sy,0)*-.35px));will-change:transform}
+.more{display:inline-block;margin-top:14px;color:var(--text);font-size:14px;text-decoration:none;border-bottom:1px solid hsl(215 16% 28%);padding-bottom:2px;transition:.3s}.more:hover{border-color:var(--w);letter-spacing:.02em}
+.info{margin-top:14px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:hsl(215 24% 7%);font-size:14px;color:var(--mute);min-height:46px;transition:.3s}
+.g{cursor:pointer;border-radius:8px;transition:.3s}.g:hover label,.g.on label{color:var(--w)}.g:hover .trk i,.g.on .trk i{filter:brightness(1.3);box-shadow:0 0 18px hsla(215,85%,88%,.35)}
+.ax{cursor:pointer}.ax text{fill:hsl(215 12% 62%);transition:.3s}.ax:hover .dt,.ax.on .dt{r:7;fill:#fff}.ax:hover text,.ax.on text{fill:hsl(215 75% 94%)}.ax .dt{transition:.3s}
+.donutsvg{width:170px;height:170px;flex:none}
+.seg{cursor:pointer;stroke-dasharray:0 377;stroke-dashoffset:var(--o);transition:stroke-dasharray 1.3s cubic-bezier(.2,.8,.2,1) .3s,stroke-width .3s,opacity .3s}
+.page.on .seg{stroke-dasharray:var(--d)}.seg:hover,.seg.on{stroke-width:26}.donutw.has .seg:not(.on){opacity:.45}
+.leg li{cursor:pointer;transition:.3s}.leg li:hover,.leg li.on{color:var(--w);transform:translateX(4px)}
+.funnel button{font:inherit;cursor:pointer;color:var(--text);width:var(--w);height:42px;border-radius:10px;background:linear-gradient(90deg,hsl(215 22% 14%),hsl(215 30% 22%));border:1px solid var(--line);font-size:13px;white-space:nowrap;overflow:hidden;transition:.3s}
+.funnel button:hover,.funnel button.on{border-color:hsl(215 40% 60%);transform:scale(1.03);background:linear-gradient(90deg,hsl(215 30% 22%),hsl(215 40% 38%))}
+.split{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;margin-top:30px;align-items:start}
+.sticky{position:sticky;top:100px}
+.sticky .photo{aspect-ratio:4/5}
+.chip2{display:inline-flex;gap:8px;align-items:center;margin-top:14px;padding:10px 16px;border-radius:14px;font-size:13px;background:rgba(24,24,24,.5);border:1px solid var(--line);backdrop-filter:blur(10px)}
+.chap{padding:30px;margin-bottom:22px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(160deg,var(--s2),var(--s1));position:relative}
+.chap .n{position:absolute;right:22px;top:14px;font-size:44px;font-weight:800;color:hsl(215 16% 17%)}
+.chap h3{margin-bottom:8px}.chap p{color:var(--mute)}.chap b{color:var(--text)}
+.flips{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.flip{perspective:900px;height:190px;cursor:pointer}
+.flip .in{position:relative;width:100%;height:100%;transition:transform .8s cubic-bezier(.2,.8,.2,1);transform-style:preserve-3d}
+.flip.fl .in{transform:rotateY(180deg)}
+.flip .f,.flip .b{position:absolute;inset:0;padding:26px;border-radius:22px;border:1px solid var(--line);backface-visibility:hidden;-webkit-backface-visibility:hidden;background:linear-gradient(160deg,var(--s2),var(--s1))}
+.flip .b{transform:rotateY(180deg);background:linear-gradient(160deg,hsl(215 30% 18%),hsl(215 25% 10%))}
+.flip p{color:var(--mute);margin-top:6px}
+.filters,.tabs,.toolrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+.fb,.tb,.tool{font:inherit;font-size:14px;padding:10px 20px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--mute);cursor:pointer;transition:.3s}
+.fb:hover,.tb:hover,.tool:hover{color:var(--w);border-color:hsl(215 16% 32%);transform:translateY(-2px)}
+.fb.on,.tb.on,.tool.on{background:var(--w);color:hsl(215 28% 5%);border-color:var(--w)}
+.tl{position:relative;margin-top:30px;padding-left:34px;display:grid;gap:18px}
+.spine{position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--line)}
+.spine i{display:block;width:100%;height:0;background:linear-gradient(var(--w),hsl(215 40% 50%));box-shadow:0 0 14px hsla(215,85%,88%,.5)}
+.tli{position:relative;transition:opacity .5s,transform .8s,max-height .6s}
+.tli::before{content:"";position:absolute;left:-33px;top:32px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--w)}
+.tli.hide{display:none}
+.tli .card{cursor:pointer}
+.more-d{max-height:0;overflow:hidden;transition:max-height .6s cubic-bezier(.2,.8,.2,1)}
+.tli.open .more-d{max-height:240px}.tli.open .tg{opacity:0}
+.tli .more-d ul{padding-left:18px;margin-top:14px;color:var(--mute);font-size:15px}
+.tpanel{margin-top:16px;min-height:280px}
+.tp{display:none}.tp.on{display:block;animation:rise .6s cubic-bezier(.2,.8,.2,1) both}
+.tp ul{padding-left:18px;margin-top:10px;color:var(--mute)}.tp p{color:var(--mute);margin-top:6px}
+.mt{height:8px;border-radius:8px;background:hsl(215 20% 12%);overflow:hidden;margin-top:8px}
+.mt i{display:block;height:100%;width:0;border-radius:8px;background:linear-gradient(90deg,hsl(215 30% 35%),hsl(215 85% 85%))}
+.tp.on .mt i{animation:fillw 1.2s cubic-bezier(.2,.8,.2,1) .2s both}
+@keyframes fillw{from{width:0}to{width:var(--v)}}
+.info2{margin-top:14px;color:var(--mute)}
+.tool{font-weight:600}
+.cshell{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-top:30px}
+.cside{display:grid;gap:16px;align-content:start}
+.cform{display:grid;gap:12px}
+.cform input,.cform textarea{font:inherit;color:var(--text);background:hsl(215 24% 7%);border:1px solid var(--line);border-radius:12px;padding:14px;outline:none;transition:.3s;width:100%}
+.cform input:focus,.cform textarea:focus{border-color:hsl(215 40% 60%);box-shadow:0 0 0 4px hsla(215,85%,88%,.08)}
+.cp{font:inherit;text-align:left;color:inherit;cursor:pointer}
+.faqs{display:grid;gap:12px;margin-top:20px}
+.faq{border:1px solid var(--line);border-radius:18px;background:var(--s1);overflow:hidden}
+.q{width:100%;font:inherit;font-weight:600;color:var(--text);background:none;border:0;padding:20px 22px;text-align:left;display:flex;justify-content:space-between;cursor:pointer}
+.q span{transition:.4s;color:var(--mute)}.faq.open .q span{transform:rotate(45deg)}
+.faq .a{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.2,.8,.2,1)}.faq .a p{padding:0 22px 20px;color:var(--mute)}
+.faq.open .a{max-height:160px}
+@media(max-width:760px){.split,.cshell{grid-template-columns:1fr}.sticky{position:static}.donutsvg{width:150px;height:150px}}
+@media(prefers-reduced-motion:reduce){.sr{opacity:1;transform:none}}
+
+@property --a{syntax:"<angle>";inherits:false;initial-value:0deg}
+nav{gap:6px;padding:7px 7px 7px 8px;align-items:center;border:1px solid transparent;background:linear-gradient(hsla(215,28%,7%,.78),hsla(215,28%,7%,.78)) padding-box,conic-gradient(from var(--a),hsl(215 16% 18%),hsl(215 85% 88%) 12%,hsl(215 16% 18%) 28%,hsl(215 16% 18%)) border-box;animation:drop .8s cubic-bezier(.2,.8,.2,1) both,rot 7s linear infinite;transition:padding .4s,box-shadow .4s}
+@keyframes rot{to{--a:360deg}}
+nav.sm{padding:4px 5px 4px 6px;box-shadow:0 14px 50px rgba(0,0,0,.7)}
+nav a{display:inline-flex;align-items:center;gap:7px}
+nav .links{position:relative;display:flex;gap:2px}
+nav .links a{position:relative;z-index:1;padding:9px 16px}
+nav .links a svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .35s}
+nav .links a:hover svg{transform:translateY(-2px) scale(1.15)}
+nav a.on{background:none;color:var(--mute)}
+nav .links a.on{color:hsl(215 28% 5%)}
+#ind{position:absolute;top:0;bottom:0;left:0;width:0;border-radius:999px;background:var(--w);box-shadow:0 0 22px hsla(215,85%,88%,.35);transition:left .45s cubic-bezier(.2,.8,.2,1),width .45s cubic-bezier(.2,.8,.2,1)}
+nav a.brand{padding:0;margin-right:4px}
+.mono{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:14px;letter-spacing:-.02em;color:var(--w);background:radial-gradient(circle at 30% 25%,hsl(215 28% 18%),hsl(215 28% 7%));border:1px solid hsl(215 16% 24%);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+nav a.brand:hover .mono{transform:rotate(360deg) scale(1.08)}
+nav a.cta{margin-left:4px;padding:10px 18px;font-size:14px;font-weight:600;color:var(--w);border:1px solid hsl(215 16% 26%);background:hsla(215,30%,20%,.35);transition:.3s}
+nav a.cta:hover,nav a.cta.on{background:var(--w);color:hsl(215 28% 5%);border-color:var(--w)}
+nav a.cta .dot{width:7px;height:7px}
+nav a.cta:hover .dot{background:hsl(215 28% 5%)}
+@media(max-width:640px){nav .links a span{display:none}nav .links a{padding:11px 13px}nav .links a svg{width:18px;height:18px}nav a.cta{padding:10px 14px}nav a.cta .dot{display:none}.mono{width:36px;height:36px}}
+</style>
+</head>
+<body>
+<div id="prog"></div><div class="grid-bg"></div><div id="glow"></div>
+<nav id="nav"><a class="brand" href="#home" aria-label="Home"><span class="mono">PP</span></a><div class="links" id="links"><i id="ind"></i><a href="#home"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>Home</span></a><a href="#about"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>About</span></a><a href="#experience"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg><span>Experience</span></a><a href="#expertise"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg><span>Expertise</span></a><a href="#contact"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>Contact</span></a></div><a class="cta" href="#contact"><span class="dot"></span>Let's talk</a></nav>
+
+<main>
+<!-- HOME -->
+<section class="page" id="home">
+  <div class="hero">
+    <div>
+      <span class="tag rv" style="--i:0"><span class="dot"></span>Open to new opportunities</span>
+      <h1 class="rv" style="--i:1">Md Parvez Sarker Prottoy<br><span>B2B sales &amp; business development.</span></h1>
+      <p class="lead rv" style="--i:2">I find the right companies, start the right conversations and turn them into customers — prospecting, lead generation and customer acquisition for US-based teams.</p>
+      <div class="btns rv" style="--i:3"><a class="btn pri" href="#experience">View experience</a><a class="btn" href="#contact">Get in touch</a></div>
+    </div>
+    <div class="art rv" style="--i:2">
+      <svg viewBox="0 0 400 400" fill="none">
+        <circle cx="200" cy="200" r="170" stroke="hsl(215 18% 17%)"/>
+        <circle cx="200" cy="200" r="120" stroke="hsl(215 16% 20%)" stroke-dasharray="3 7"/>
+        <circle cx="200" cy="200" r="70" stroke="hsl(215 16% 26%)"/>
+        <g class="orbit"><circle cx="200" cy="30" r="8" fill="hsl(215 75% 94%)"/><circle cx="370" cy="200" r="4" fill="hsl(215 18% 52%)"/></g>
+        <g class="orbit r"><circle cx="200" cy="80" r="6" fill="hsl(215 40% 76%)"/><circle cx="80" cy="200" r="4" fill="hsl(215 75% 94%)"/><circle cx="320" cy="200" r="3" fill="hsl(215 18% 52%)"/></g>
+        <circle cx="200" cy="200" r="26" fill="hsl(215 75% 94%)"/><circle cx="200" cy="200" r="10" fill="#0a0a0a"/>
+      </svg>
+      <div class="chip float" style="top:2%;left:-4%"><b>B2B</b>Sales</div>
+      <div class="chip float b" style="bottom:12%;right:-6%"><b>Leads</b>Research</div>
+      <div class="chip float c" style="bottom:-2%;left:6%"><b>CRM</b>HubSpot · Pipedrive</div>
+    </div>
+  </div>
+  <div class="stats"><a class="card  rv" style="--i:4" href="#experience"><div class="meta">Years in sales &amp; outreach</div><div class="big"><span data-count="4">0</span>+</div><div class="meta go">See experience &rarr;</div></a><a class="card  rv" style="--i:5" href="#experience"><div class="meta">Companies &amp; projects</div><div class="big"><span data-count="4">0</span></div><div class="meta go">See roles &rarr;</div></a><a class="card  rv" style="--i:6" href="#expertise"><div class="meta">Sales tools used daily</div><div class="big"><span data-count="7">0</span></div><div class="meta go">See toolkit &rarr;</div></a><a class="card  rv" style="--i:7" href="#about"><div class="meta">Clients based in</div><div class="big">USA</div><div class="meta go">About me &rarr;</div></a></div>
+  <div class="dash">
+<div class="card wide rv" style="--i:8"><div class="row"><h3>Career timeline</h3><span class="meta">Tap a bar</span></div><div class="gantt"><div class="yrs"><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span></div>
+<div class="g" data-t="YesAssistant · Assistant Business Development Lead, Telemarketing · 2022 – 2026"><label>YesAssistant</label><div class="trk"><i style="--l:0%;--w:100%"></i></div></div><div class="g" data-t="DigiFea · Senior Office Executive, Telesales &amp; Account Management · 2024 – 2026"><label>DigiFea</label><div class="trk"><i style="--l:40%;--w:60%"></i></div></div><div class="g" data-t="EpicRise Electronics · Account Executive, B2B Sales · 2024 – 2026"><label>EpicRise</label><div class="trk"><i style="--l:40%;--w:60%"></i></div></div><div class="g" data-t="Alcott HR · Prospect Research &amp; Lead Generation project · 2026, completed"><label>Alcott HR</label><div class="trk"><i style="--l:80%;--w:20%"></i></div></div></div><div class="info" id="gi">Tap any bar to see the role.</div><a class="more" href="#experience">Full experience &rarr;</a></div>
+<div class="card rv" style="--i:9"><div class="row"><h3>Skill map</h3><span class="meta">Tap a point</span></div><svg viewBox="-10 0 220 200" class="radar"><polygon points="100.0,73.6 125.1,91.8 115.5,121.4 84.5,121.4 74.9,91.8" fill="none" stroke="hsl(215 18% 20%)"/><polygon points="100.0,47.2 150.2,83.7 131.0,142.7 69.0,142.7 49.8,83.7" fill="none" stroke="hsl(215 18% 20%)"/><polygon points="100.0,20.0 176.1,75.3 147.0,164.7 53.0,164.7 23.9,75.3" fill="none" stroke="hsl(215 18% 20%)"/><line x1="100" y1="100" x2="100.0" y2="20.0" stroke="hsl(215 18% 20%)"/><line x1="100" y1="100" x2="176.1" y2="75.3" stroke="hsl(215 18% 20%)"/><line x1="100" y1="100" x2="147.0" y2="164.7" stroke="hsl(215 18% 20%)"/><line x1="100" y1="100" x2="53.0" y2="164.7" stroke="hsl(215 18% 20%)"/><line x1="100" y1="100" x2="23.9" y2="75.3" stroke="hsl(215 18% 20%)"/><g class="rp"><polygon points="100.0,26.4 167.0,78.2 138.6,153.1 63.3,150.5 31.5,77.8" fill="hsla(215,85%,88%,.15)" stroke="hsl(215 75% 94%)" stroke-width="1.5"/></g><g class="ax" data-i="0"><circle cx="100.0" cy="26.4" r="12" fill="transparent"/><circle class="dt" cx="100.0" cy="26.4" r="4" fill="hsl(215 75% 94%)"/><text x="100.0" y="6.0" text-anchor="middle" font-size="9">Lead gen</text></g><g class="ax" data-i="1"><circle cx="167.0" cy="78.2" r="12" fill="transparent"/><circle class="dt" cx="167.0" cy="78.2" r="4" fill="hsl(215 75% 94%)"/><text x="192.3" y="73.0" text-anchor="middle" font-size="9">Outreach</text></g><g class="ax" data-i="2"><circle cx="138.6" cy="153.1" r="12" fill="transparent"/><circle class="dt" cx="138.6" cy="153.1" r="4" fill="hsl(215 75% 94%)"/><text x="157.0" y="181.5" text-anchor="middle" font-size="9">CRM</text></g><g class="ax" data-i="3"><circle cx="63.3" cy="150.5" r="12" fill="transparent"/><circle class="dt" cx="63.3" cy="150.5" r="4" fill="hsl(215 75% 94%)"/><text x="43.0" y="181.5" text-anchor="middle" font-size="9">Accounts</text></g><g class="ax" data-i="4"><circle cx="31.5" cy="77.8" r="12" fill="transparent"/><circle class="dt" cx="31.5" cy="77.8" r="4" fill="hsl(215 75% 94%)"/><text x="7.7" y="73.0" text-anchor="middle" font-size="9">Research</text></g></svg><div class="info" id="ri">Lead gen: building targeted prospect lists</div><a class="more" href="#expertise">Explore skills &rarr;</a></div>
+<div class="card rv" style="--i:10"><div class="row"><h3>Where my time goes</h3><span class="meta">Tap a slice</span></div><div class="donutw"><svg viewBox="0 0 160 160" class="donutsvg"><g transform="rotate(-90 80 80)"><circle class="seg" data-k="0" cx="80" cy="80" r="60" fill="none" stroke="hsl(215 85% 90%)" stroke-width="20" style="--d:150.8 226.2;--o:0.0"/><circle class="seg" data-k="1" cx="80" cy="80" r="60" fill="none" stroke="hsl(215 45% 62%)" stroke-width="20" style="--d:94.2 282.7;--o:-150.8"/><circle class="seg" data-k="2" cx="80" cy="80" r="60" fill="none" stroke="hsl(215 30% 40%)" stroke-width="20" style="--d:75.4 301.6;--o:-245.0"/><circle class="seg" data-k="3" cx="80" cy="80" r="60" fill="none" stroke="hsl(215 20% 30%)" stroke-width="20" style="--d:56.5 320.4;--o:-320.4"/></g><text id="dn" x="80" y="82" text-anchor="middle" font-size="26" font-weight="700" fill="hsl(215 75% 94%)">40%</text><text id="dl" x="80" y="100" text-anchor="middle" font-size="10" fill="hsl(215 12% 62%)">Outbound</text></svg><ul class="leg"><li data-k="0"><i style="background:hsl(215 85% 90%)"></i>Outbound 40%</li><li data-k="1"><i style="background:hsl(215 45% 62%)"></i>Research 25%</li><li data-k="2"><i style="background:hsl(215 30% 40%)"></i>Accounts 20%</li><li data-k="3"><i style="background:hsl(215 20% 30%)"></i>CRM 15%</li></ul></div><p class="meta" id="dd" style="text-align:center;margin-top:10px;min-height:20px">Calls, email and LinkedIn outreach</p><a class="more" href="#expertise">See the toolkit &rarr;</a></div>
+<div class="card wide rv" style="--i:11"><div class="row"><h3>How I turn prospects into customers</h3><span class="meta">Tap a step</span></div><div class="funnel">
+<button style="--w:100%" data-d="I build focused lists of companies that fit, and confirm the details before anyone is contacted.">1 &middot; Research the right accounts</button>
+<button style="--w:82%" data-d="Calls, email and LinkedIn aimed at the person who actually decides.">2 &middot; Reach decision makers</button>
+<button style="--w:64%" data-d="Short, relevant conversations that find out what the prospect really needs.">3 &middot; Start real conversations</button>
+<button style="--w:46%" data-d="Qualified meetings are booked and handed over with the context the team needs.">4 &middot; Book qualified meetings</button>
+<button style="--w:30%" data-d="Follow-up, onboarding and repeat business so the first sale is not the last.">5 &middot; Close &amp; grow</button></div><div class="info" id="fi">Tap a step to see how I handle it.</div><a class="more" href="#about">How I work &rarr;</a></div>
+</div>
+<div class="band"><div>PROSPECTING &middot; LEAD GENERATION &middot; COLD OUTREACH &middot; ACCOUNT MANAGEMENT &middot; TELESALES &middot; </div></div>
+  <div class="marquee"><div><span>Prospecting</span><span>Lead generation</span><span>Cold outreach</span><span>Account management</span><span>Telesales</span><span>Reseller sales</span><span>Prospecting</span><span>Lead generation</span><span>Cold outreach</span><span>Account management</span><span>Telesales</span><span>Reseller sales</span></div></div>
+  <div class="cards" style="margin-top:40px"><a class="card  rv" style="--i:12" href="#about"><h3>About me</h3><p>Who I am and how I work.</p><div class="meta go">Open &rarr;</div></a><a class="card  rv" style="--i:13" href="#experience"><h3>Experience</h3><p>Roles, companies and years.</p><div class="meta go">Open &rarr;</div></a><a class="card  rv" style="--i:14" href="#expertise"><h3>Expertise</h3><p>Skills, tools and focus areas.</p><div class="meta go">Open &rarr;</div></a><a class="card  rv" style="--i:15" href="#contact"><h3>Contact</h3><p>Let's talk about your pipeline.</p><div class="meta go">Open &rarr;</div></a></div>
+</section>
+
+<!-- ABOUT -->
+<section class="page" id="about">
+  <span class="tag rv">About</span>
+  <h2 class="rv" style="--i:1">Hi, I'm Parvez.</h2>
+  <div class="split">
+    <div class="sticky rv" style="--i:2"><div class="photo float"><img src="photo.jpg" alt="Md Parvez Sarker Prottoy" onerror="this.remove();this.parentNode.textContent='MP'"></div><div class="chip2"><span class="dot"></span> B2B sales &amp; business development</div></div>
+    <div class="chapters">
+      <article class="chap sr " style="--i:0"><span class="n">01</span><h3>Who I am</h3><p>I'm a <b>business development specialist</b> focused on B2B sales and customer acquisition. My work is finding qualified prospects, reaching them, and building the pipeline that sales teams close from.</p></article>
+      <article class="chap sr " style="--i:0"><span class="n">02</span><h3>What I've done</h3><p>From 2024 to 2026 I worked as <b>Account Executive at EpicRise Electronics</b>, handling all reseller sales. In 2026 I completed a <b>prospect research and lead generation project for Alcott HR</b>.</p></article>
+      <article class="chap sr " style="--i:0"><span class="n">03</span><h3>Where it started</h3><p>Before that I spent years in <b>telesales, telemarketing and account management</b> at DigiFea and YesAssistant, which is where I learned to hold a conversation and ask for the next step.</p></article>
+      <article class="chap sr " style="--i:0"><span class="n">04</span><h3>Background</h3><p>I hold a <b>B.Sc. in Computer Science and Engineering</b> from Green University of Bangladesh (2024), which shapes how I work with CRMs, data and automation.</p></article>
+    </div>
+  </div>
+  <h2 class="h sr " style="--i:0;margin-top:70px">How I work</h2><p class="meta sr">Tap a card to flip it.</p>
+  <div class="cards flips">
+    <div class="flip sr " style="--i:0"><div class="in"><div class="f"><h3>Research</h3><p>Right company, right person.</p></div><div class="b"><p>I qualify accounts against real data before any outreach, so every call has a reason.</p></div></div></div>
+    <div class="flip sr " style="--i:1"><div class="in"><div class="f"><h3>Reach</h3><p>Calls, email, LinkedIn.</p></div><div class="b"><p>Multi-channel sequences that sound like a person wrote them, because one did.</p></div></div></div>
+    <div class="flip sr " style="--i:2"><div class="in"><div class="f"><h3>Converse</h3><p>Listen first.</p></div><div class="b"><p>Short discovery questions to find the actual problem before pitching anything.</p></div></div></div>
+    <div class="flip sr " style="--i:3"><div class="in"><div class="f"><h3>Follow up</h3><p>Where deals are won.</p></div><div class="b"><p>Clean CRM notes and timely follow-ups so no warm lead goes cold.</p></div></div></div>
+  </div>
+  <div class="band"><div>BUSINESS DEVELOPMENT &middot; B2B SALES &middot; CUSTOMER ACQUISITION &middot; </div></div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="page" id="experience">
+  <span class="tag rv">Experience</span>
+  <h2 class="rv" style="--i:1">Where I've worked.</h2>
+  <div class="filters rv" style="--i:2"><button class="fb on" data-f="all">All</button><button class="fb" data-f="sales">Sales</button><button class="fb" data-f="research">Research</button><button class="fb" data-f="tele">Telemarketing</button></div>
+  <div class="tl" id="tl"><div class="spine"><i id="spf"></i></div><div class="tli sr l" data-cat="sales" style="--i:0"><div class="card"><div class="row"><h3>Account Executive · B2B Sales</h3><span class="meta">2024 – 2026</span></div><p>EpicRise Electronics LLC · USA, Remote</p><span class="pill">Sales</span><div class="more-d"><ul><li>Owned all reseller sales end to end</li><li>Prospecting, outreach, follow-up and account growth</li><li>Managed reseller relationships after the first sale</li></ul></div><div class="meta tg">Tap to expand &darr;</div></div></div><div class="tli sr r" data-cat="research" style="--i:0"><div class="card"><div class="row"><h3>Prospect Research &amp; Lead Generation Specialist</h3><span class="meta">2026 · Project, completed</span></div><p>Alcott HR · USA, Remote</p><span class="pill">Research</span><div class="more-d"><ul><li>Built and validated targeted prospect lists</li><li>Verified company data from public filings</li><li>Prepared clean lists ready for outreach</li></ul></div><div class="meta tg">Tap to expand &darr;</div></div></div><div class="tli sr l" data-cat="sales" style="--i:0"><div class="card"><div class="row"><h3>Senior Office Executive · Telesales &amp; Account Management</h3><span class="meta">2024 – 2026</span></div><p>DigiFea</p><span class="pill">Sales</span><div class="more-d"><ul><li>Telesales and customer follow-up</li><li>Account management for existing customers</li><li>Kept records and pipeline organised</li></ul></div><div class="meta tg">Tap to expand &darr;</div></div></div><div class="tli sr r" data-cat="tele" style="--i:0"><div class="card"><div class="row"><h3>Assistant Business Development Lead · Telemarketing</h3><span class="meta">2022 – 2026</span></div><p>YesAssistant</p><span class="pill">Telemarketing</span><div class="more-d"><ul><li>Outbound telemarketing and lead qualification</li><li>Supported business development work</li><li>Where my cold calling foundation was built</li></ul></div><div class="meta tg">Tap to expand &darr;</div></div></div></div>
+  <div class="band"><div>EPICRISE &middot; ALCOTT HR &middot; DIGIFEA &middot; YESASSISTANT &middot; </div></div>
+</section>
+
+<!-- EXPERTISE -->
+<section class="page" id="expertise">
+  <span class="tag rv">Expertise</span>
+  <h2 class="rv" style="--i:1">What I do best.</h2>
+  <div class="tabs rv" style="--i:2"><button class="tb on" data-k="0">Outbound</button><button class="tb" data-k="1">Research</button><button class="tb" data-k="2">CRM</button><button class="tb" data-k="3">Accounts</button></div>
+  <div class="card tpanel rv" style="--i:3"><div class="tp on" data-k="0"><h3>Outbound</h3><p>Calls, email and LinkedIn that start conversations.</p><ul><li>Cold calling and telesales</li><li>Multi-touch email and LinkedIn sequences</li><li>Objection handling and booking next steps</li></ul><div class="meta" style="margin-top:14px">Strength</div><div class="mt"><i style="--v:92%"></i></div><div style="margin-top:12px"><span class=pill>Outreach.io</span><span class=pill>GHL</span></div></div><div class="tp" data-k="1"><h3>Research</h3><p>Finding and qualifying the right accounts.</p><ul><li>Targeted prospect lists</li><li>Verification against public sources</li><li>Decision-maker identification</li></ul><div class="meta" style="margin-top:14px">Strength</div><div class="mt"><i style="--v:90%"></i></div><div style="margin-top:12px"><span class=pill>Helium</span><span class=pill>HubSpot</span></div></div><div class="tp" data-k="2"><h3>CRM</h3><p>Pipelines that stay clean and moving.</p><ul><li>Deal stages and follow-up discipline</li><li>Notes other people can pick up</li><li>Reporting for sales teams</li></ul><div class="meta" style="margin-top:14px">Strength</div><div class="mt"><i style="--v:82%"></i></div><div style="margin-top:12px"><span class=pill>HubSpot</span><span class=pill>Pipedrive</span><span class=pill>Odoo</span></div></div><div class="tp" data-k="3"><h3>Accounts</h3><p>Relationships after the first sale.</p><ul><li>Reseller relationship management</li><li>Repeat business and upsell follow-up</li><li>Order and customer coordination</li></ul><div class="meta" style="margin-top:14px">Strength</div><div class="mt"><i style="--v:78%"></i></div><div style="margin-top:12px"><span class=pill>Odoo</span><span class=pill>Shopify</span></div></div></div>
+  <h2 class="h sr " style="--i:0;margin-top:60px">Toolkit</h2><p class="meta sr">Tap a tool to see how I use it.</p>
+  <div class="toolrow sr"><button class="tool" data-t="HubSpot: CRM and pipeline tracking">HubSpot</button><button class="tool" data-t="Pipedrive: Deal pipeline management">Pipedrive</button><button class="tool" data-t="Outreach.io: Sequenced email and call outreach">Outreach.io</button><button class="tool" data-t="GHL: GoHighLevel automations and follow-ups">GHL</button><button class="tool" data-t="Odoo: Orders, customers and inventory records">Odoo</button><button class="tool" data-t="Shopify: Store and order management">Shopify</button><button class="tool" data-t="Helium: Marketplace and product research">Helium</button></div><div class="card info2 sr" id="ti">Pick a tool above.</div>
+  <h2 class="h sr " style="--i:0;margin-top:60px">Skill levels</h2>
+  <div class="cards">
+    <div class="card sr"><div class="meta">Lead generation</div><div class="bar"><i style="--v:92%"></i></div><div class="meta" style="margin-top:12px">Cold outreach</div><div class="bar"><i style="--v:88%"></i></div></div>
+    <div class="card sr"><div class="meta">CRM &amp; sales tools</div><div class="bar"><i style="--v:85%"></i></div><div class="meta" style="margin-top:12px">Account management</div><div class="bar"><i style="--v:80%"></i></div></div>
+  </div>
+  <div class="band"><div>HUBSPOT &middot; PIPEDRIVE &middot; OUTREACH.IO &middot; GHL &middot; ODOO &middot; SHOPIFY &middot; HELIUM &middot; </div></div>
+</section>
+
+<!-- CONTACT -->
+<section class="page contact" id="contact">
+  <span class="tag rv">Contact</span>
+  <h2 class="rv" style="--i:1">Let's talk.</h2>
+  <p class="lead rv" style="--i:2">Need help with outbound, lead generation or building a B2B pipeline? Send a message.</p>
+  <div class="cshell">
+    <div class="card cform rv" style="--i:3"><h3>Send a message</h3>
+      <input id="cn" placeholder="Your name"><input id="ce" placeholder="Your email"><textarea id="cm" rows="4" placeholder="What do you need help with?"></textarea>
+      <button class="btn pri" id="send" type="button">Open in email &rarr;</button></div>
+    <div class="cside">
+      <button class="card cp rv" style="--i:4" data-copy="prob4080@gmail.com"><div class="meta">Email</div><h3>prob4080@gmail.com</h3><div class="meta cpm">Tap to copy</div></button>
+      <a class="card rv" style="--i:5" href="https://linkedin.com/in/md-parvez-sarker-prottoy-626140380" target="_blank" rel="noopener"><div class="meta">LinkedIn</div><h3>Md Parvez Sarker Prottoy</h3></a>
+      <a class="card rv" style="--i:6" href="https://wa.me/8801876236929" target="_blank" rel="noopener"><div class="meta">WhatsApp</div><h3>+880 1876-236929</h3></a>
+    </div>
+  </div>
+  <h2 class="h sr " style="--i:0;margin-top:60px">Good to know</h2>
+  <div class="faqs"><div class="faq sr"><button class="q">What can you help with?<span>+</span></button><div class="a"><p>Prospect research, lead lists, cold outreach and follow-up for B2B teams that want more qualified conversations.</p></div></div><div class="faq sr"><button class="q">What tools do you work in?<span>+</span></button><div class="a"><p>HubSpot, Pipedrive, Outreach.io, GHL, Odoo, Shopify and Helium.</p></div></div><div class="faq sr"><button class="q">How do we start?<span>+</span></button><div class="a"><p>Send a short message about your goal and ideal customer. I will reply with how I would approach it.</p></div></div></div>
+</section>
+</main>
+<footer>© <span id="y"></span> Md Parvez Sarker Prottoy</footer>
+
+<script>
+(function(){
+  var pages=[].slice.call(document.querySelectorAll('.page')),links=[].slice.call(document.querySelectorAll('nav a'));
+  function route(){
+    var h=(location.hash||'#home').slice(1);
+    if(!document.getElementById(h))h='home';
+    pages.forEach(function(p){p.classList.remove('on')});
+    void document.body.offsetWidth;
+    document.getElementById(h).classList.add('on');
+    links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+h)});
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',route);route();
+  function count(){document.querySelectorAll('.page.on [data-count]').forEach(function(el){var t=+el.dataset.count,n=0,st=setInterval(function(){n++;el.textContent=n;if(n>=t)clearInterval(st)},180)})}
+  window.addEventListener('hashchange',count);count();
+  var g=document.getElementById('glow');
+  window.addEventListener('pointermove',function(e){g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'});
+  document.addEventListener('pointermove',function(e){
+    var c=e.target.closest&&e.target.closest('.card');if(!c)return;
+    var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');
+  });
+  document.getElementById('y').textContent=new Date().getFullYear();
+})();
+
+(function(){
+  var $=function(q,r){return (r||document).querySelector(q)},$$=function(q,r){return [].slice.call((r||document).querySelectorAll(q))};
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('in',e.isIntersecting)})},{threshold:.15});
+  $$('.sr').forEach(function(el){io.observe(el)});
+  var chaps=$$('.chap');
+  function onScroll(){
+    var y=window.scrollY,h=document.documentElement;
+    h.style.setProperty('--sy',y);
+    $('#prog').style.width=(y/Math.max(1,h.scrollHeight-innerHeight)*100)+'%';
+    var tl=$('#tl');if(tl&&tl.offsetParent){var r=tl.getBoundingClientRect();var p=Math.min(1,Math.max(0,(innerHeight*.6-r.top)/r.height));$('#spf').style.height=(p*100)+'%'}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  window.addEventListener('hashchange',function(){setTimeout(onScroll,50)});
+  document.addEventListener('click',function(e){
+    var t=e.target,c;
+    if(c=t.closest('.g')){$$('.g').forEach(function(x){x.classList.remove('on')});c.classList.add('on');$('#gi').innerHTML=c.dataset.t;return}
+    if(c=t.closest('.ax')){$$('.ax').forEach(function(x){x.classList.remove('on')});c.classList.add('on');$('#ri').textContent=['Lead gen: building targeted prospect lists','Outreach: calls, email and LinkedIn','CRM: clean pipelines and follow-ups','Accounts: reseller and customer relationships','Research: qualifying companies and contacts'][+c.dataset.i];return}
+    if(c=t.closest('.seg,.leg li')){var k=+c.dataset.k,v=[[40,'Outbound','Calls, email and LinkedIn outreach'],[25,'Research','Finding and qualifying accounts'],[20,'Accounts','Reseller and customer relationships'],[15,'CRM','Pipeline hygiene and follow-ups']][k];
+      $$('.seg,.leg li').forEach(function(x){x.classList.toggle('on',+x.dataset.k===k)});$('.donutw').classList.add('has');
+      $('#dn').textContent=v[0]+'%';$('#dl').textContent=v[1];$('#dd').textContent=v[2];return}
+    if(c=t.closest('.funnel button')){$$('.funnel button').forEach(function(x){x.classList.remove('on')});c.classList.add('on');$('#fi').textContent=c.dataset.d;return}
+    if(c=t.closest('.flip')){c.classList.toggle('fl');return}
+    if(c=t.closest('.fb')){$$('.fb').forEach(function(x){x.classList.toggle('on',x===c)});$$('.tli').forEach(function(x){x.classList.toggle('hide',c.dataset.f!=='all'&&x.dataset.cat!==c.dataset.f)});setTimeout(onScroll,60);return}
+    if(c=t.closest('.tli .card')){c.parentNode.classList.toggle('open');return}
+    if(c=t.closest('.tb')){$$('.tb').forEach(function(x){x.classList.toggle('on',x===c)});$$('.tp').forEach(function(x){x.classList.toggle('on',x.dataset.k===c.dataset.k)});return}
+    if(c=t.closest('.tool')){$$('.tool').forEach(function(x){x.classList.toggle('on',x===c)});$('#ti').textContent=c.dataset.t;return}
+    if(c=t.closest('.q')){c.parentNode.classList.toggle('open');return}
+    if(c=t.closest('.cp')){var m=$('.cpm',c);try{navigator.clipboard.writeText(c.dataset.copy)}catch(x){}m.textContent='Copied!';setTimeout(function(){m.textContent='Tap to copy'},1600);return}
+    if(t.id==='send'){var b=encodeURIComponent('Hi Parvez,\n\n'+$('#cm').value+'\n\n'+$('#cn').value+'\n'+$('#ce').value);location.href='mailto:prob4080@gmail.com?subject='+encodeURIComponent('Portfolio enquiry from '+($('#cn').value||'your website'))+'&body='+b}
+  });
+  $$('.btn').forEach(function(b){b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.18)+'px,'+((e.clientY-r.top-r.height/2)*.3-3)+'px)'});b.addEventListener('pointerleave',function(){b.style.transform=''})});
+})();
+
+(function(){
+  var nav=document.getElementById('nav'),ind=document.getElementById('ind');
+  function place(){var a=document.querySelector('#links a.on');if(!a)return;ind.style.left=a.offsetLeft+'px';ind.style.width=a.offsetWidth+'px'}
+  window.addEventListener('hashchange',function(){setTimeout(place,20)});window.addEventListener('resize',place);
+  window.addEventListener('load',place);setTimeout(place,80);
+  window.addEventListener('scroll',function(){nav.classList.toggle('sm',window.scrollY>40)},{passive:true});
+})();
+</script>
+</body>
+</html>
